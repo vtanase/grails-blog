@@ -1,4 +1,4 @@
-package com.vlad.blog.domain
+package com.vlad.blog
 
 import grails.test.mixin.TestFor
 import spock.lang.Unroll

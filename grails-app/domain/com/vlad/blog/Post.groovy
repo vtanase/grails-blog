@@ -1,4 +1,4 @@
-package com.vlad.blog.domain
+package com.vlad.blog
 
 class Post {
 
