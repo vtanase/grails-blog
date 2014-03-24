@@ -18,13 +18,12 @@
         </nav>
       </div>
     </div>
-    <div class="row show-grid">
+    <div class="row">
       <div class="col-md-6 col-md-push-2">
         <div class="row">
           <div id="create-post" class="content scaffold-create" role="main">
 
             <h2><g:message code="default.create.label" args="[entityName]" /></h2>
-
             <g:if test="${flash.message}">
               <div class="message" role="status">${flash.message}</div>
             </g:if>
