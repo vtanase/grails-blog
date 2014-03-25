@@ -40,7 +40,7 @@ class PostController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'postInstance.label', default: 'Post'), postInstance.id])
-                redirect postInstance
+                redirect(action: "index")
             }
             '*' { respond postInstance, [status: CREATED] }
         }

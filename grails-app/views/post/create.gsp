@@ -40,7 +40,7 @@
 
             <g:form url="[resource:postInstance, action:'save']" class="form-horizontal" role="form" >
               <g:render template="form"/>
-              <g:submitButton name="create" class="btn btn-primary pull-right" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+              <g:submitButton id="create-btn" name="create" class="btn btn-primary pull-right" value="${message(code: 'default.button.create.label', default: 'Create')}" />
             </g:form>
           </div>
         </div>
