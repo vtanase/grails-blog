@@ -32,6 +32,7 @@
               <tr>
                 <g:sortableColumn property="title" title="${message(code: 'post.title.label', default: 'Title')}" />
                 <g:sortableColumn property="body" title="${message(code: 'post.body.label', default: 'Body')}" />
+                <th class="col-md-2">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -39,6 +40,14 @@
                 <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                   <td><g:link action="show" id="${postInstance.id}">${fieldValue(bean: postInstance, field: "title")}</g:link></td>
                   <td>${fieldValue(bean: postInstance, field: "body")}</td>
+                  <td>
+                    <g:form url="[resource:postInstance, action:'delete']" method="DELETE">
+                      <fieldset class="buttons">
+                        <g:link class="btn btn-primary edit" action="edit" resource="${postInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                        <g:actionSubmit class="btn btn-primary delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                      </fieldset>
+                    </g:form>
+                  </td>
                 </tr>
               </g:each>
             </tbody>
